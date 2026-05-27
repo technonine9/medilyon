@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medilyon Healthcare Pvt Ltd | IVD Distribution Company</title>
+<meta name="description" content="Trusted IVD distribution partner for reagents, rapid tests, and diagnostic instruments with pan-India coverage and fast fulfillment.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0A1628;
+    --navy2: #112240;
+    --teal: #0EA5E9;
+    --teal2: #06B6D4;
+    --teal-light: #E0F7FF;
+    --white: #FFFFFF;
+    --gray50: #F8FAFC;
+    --gray100: #F1F5F9;
+    --gray200: #E2E8F0;
+    --gray400: #94A3B8;
+    --gray600: #475569;
+    --gray800: #1E293B;
+    --green: #10B981;
+    --font: 'Inter', system-ui, -apple-system, sans-serif;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--gray800); background: var(--white); line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; }
+  button { cursor: pointer; border: none; font-family: var(--font); }
+
+  /* ── TYPOGRAPHY ── */
+  h1 { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 700; line-height: 1.15; }
+  h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.2; }
+  h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.3; }
+  h4 { font-size: 1rem; font-weight: 600; }
+  p { color: var(--gray600); font-size: 1rem; line-height: 1.7; }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 80px 0; }
+  .section-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+  .section-heading { margin-bottom: 16px; }
+  .section-sub { color: var(--gray600); max-width: 600px; margin-bottom: 48px; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,22,40,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .nav-logo-mark {
+    width: 38px; height: 38px; background: linear-gradient(135deg, var(--teal), var(--teal2));
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 1.1rem; color: white; letter-spacing: -0.05em;
+  }
+  .nav-logo-text { font-weight: 700; font-size: 1.15rem; color: white; }
+  .nav-logo-text span { color: var(--teal); }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a { color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: white; }
+  .btn-nav {
+    background: var(--teal); color: white; padding: 9px 20px; border-radius: 8px;
+    font-size: 0.875rem; font-weight: 600; transition: background 0.2s;
+  }
+  .btn-nav:hover { background: var(--teal2); }
+  .nav-mobile-btn { display: none; background: none; color: white; font-size: 1.5rem; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    padding: 140px 0 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -80px; left: -80px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(14,165,233,0.12); border: 1px solid rgba(14,165,233,0.25);
+    color: var(--teal); padding: 6px 14px; border-radius: 100px;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 24px;
+  }
+  .hero h1 { color: white; margin-bottom: 20px; }
+  .hero h1 em { color: var(--teal); font-style: normal; }
+  .hero p { color: rgba(255,255,255,0.65); font-size: 1.1rem; margin-bottom: 36px; max-width: 480px; }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--teal); color: white; padding: 13px 28px; border-radius: 9px;
+    font-weight: 600; font-size: 0.95rem; transition: all 0.2s; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--teal2); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(14,165,233,0.35); }
+  .btn-secondary {
+    background: rgba(255,255,255,0.08); color: white; padding: 13px 28px; border-radius: 9px;
+    font-weight: 600; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.15);
+    transition: all 0.2s; display: inline-block;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.14); }
+  .hero-stats { display: flex; gap: 32px; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .hero-stat-num { font-size: 1.8rem; font-weight: 800; color: white; }
+  .hero-stat-num span { color: var(--teal); }
+  .hero-stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .hero-visual {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px; padding: 32px; position: relative;
+  }
+  .hero-card {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius); padding: 20px; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .hero-card:last-child { margin-bottom: 0; }
+  .hero-card-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;
+  }
+  .hero-card-icon.blue { background: rgba(14,165,233,0.2); }
+  .hero-card-icon.green { background: rgba(16,185,129,0.2); }
+  .hero-card-icon.purple { background: rgba(139,92,246,0.2); }
+  .hero-card h4 { color: white; font-size: 0.9rem; margin-bottom: 2px; }
+  .hero-card p { color: rgba(255,255,255,0.5); font-size: 0.78rem; margin: 0; }
+
+  /* ── TRUST BAR ── */
+  .trust-bar { background: var(--gray50); border-bottom: 1px solid var(--gray200); padding: 20px 0; }
+  .trust-items { display: flex; gap: 40px; align-items: center; justify-content: center; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; font-weight: 500; color: var(--gray600); }
+  .trust-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; }
+
+  /* ── STATS BAND ── */
+  .stats-band { background: var(--navy2); padding: 60px 0; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .stat-item { text-align: center; padding: 24px; border-right: 1px solid rgba(255,255,255,0.08); }
+  .stat-item:last-child { border-right: none; }
+  .stat-num { font-size: 2.8rem; font-weight: 800; color: white; line-height: 1; }
+  .stat-num span { color: var(--teal); }
+  .stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 6px; }
+
+  /* ── FEATURES ── */
+  .features { background: white; }
+  .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .feature-card {
+    border: 1px solid var(--gray200); border-radius: var(--radius);
+    padding: 32px; transition: all 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .feature-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--teal2));
+    transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+  }
+  .feature-card:hover { border-color: var(--teal); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+  .feature-card:hover::before { transform: scaleX(1); }
+  .feature-icon {
+    width: 52px; height: 52px; background: var(--teal-light); border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px;
+  }
+  .feature-card h3 { margin-bottom: 10px; color: var(--navy); }
+  .feature-card p { font-size: 0.9rem; }
+
+  /* ── PRODUCTS ── */
+  .products-section { background: var(--gray50); }
+  .products-filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
+  .filter-btn {
+    padding: 8px 18px; border-radius: 100px; font-size: 0.875rem; font-weight: 500;
+    border: 1.5px solid var(--gray200); background: white; color: var(--gray600);
+    transition: all 0.2s;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    border-color: var(--teal); background: var(--teal); color: white;
+  }
+  .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .product-card {
+    background: white; border: 1px solid var(--gray200); border-radius: var(--radius);
+    overflow: hidden; transition: all 0.2s;
+  }
+  .product-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--teal); }
+  .product-card[style*="none"] { display: none !important; }
+  .product-img {
+    height: 160px; display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; background: var(--gray50);
+  }
+  .product-body { padding: 20px; }
+  .product-cat {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--teal); background: var(--teal-light); padding: 3px 10px; border-radius: 100px;
+    display: inline-block; margin-bottom: 10px;
+  }
+  .product-body h4 { color: var(--navy); margin-bottom: 6px; }
+  .product-body p { font-size: 0.85rem; color: var(--gray600); margin-bottom: 14px; }
+  .product-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 0.72rem; background: var(--gray100); color: var(--gray600);
+    padding: 3px 8px; border-radius: 4px;
+  }
+
+  /* ── WHY ── */
+  .why-section { background: var(--navy); }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .why-points { display: flex; flex-direction: column; gap: 28px; }
+  .why-point { display: flex; gap: 18px; }
+  .why-num {
+    width: 44px; height: 44px; background: rgba(14,165,233,0.15); border: 1px solid rgba(14,165,233,0.3);
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 1rem; color: var(--teal); flex-shrink: 0;
+  }
+  .why-point h3 { color: white; margin-bottom: 6px; }
+  .why-point p { color: rgba(255,255,255,0.55); font-size: 0.9rem; }
+  .why-visual {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px; padding: 36px;
+  }
+  .why-visual .section-label, .why-section .section-label { color: var(--teal); }
+  .why-visual h2 { color: white; }
+  .why-stat-row { display: flex; gap: 0; margin-top: 32px; border-radius: var(--radius); overflow: hidden; }
+  .why-stat {
+    flex: 1; padding: 20px; text-align: center;
+    background: rgba(14,165,233,0.08); border-right: 1px solid rgba(14,165,233,0.15);
+  }
+  .why-stat:last-child { border-right: none; }
+  .why-stat-v { font-size: 1.6rem; font-weight: 800; color: var(--teal); }
+  .why-stat-l { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 4px; }
+  .cert-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+  .cert-badge {
+    display: flex; align-items: center; gap: 8px; padding: 10px 14px;
+    background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25);
+    border-radius: var(--radius-sm);
+  }
+  .cert-badge span { font-size: 0.8rem; color: var(--green); font-weight: 600; }
+
+  /* ── PARTNERS ── */
+  .partners-section { background: white; }
+  .partner-logos {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px;
+    background: var(--gray200); border: 1px solid var(--gray200); border-radius: var(--radius); overflow: hidden;
+    margin-top: 40px;
+  }
+  .partner-logo {
+    background: white; display: flex; align-items: center; justify-content: center;
+    padding: 28px 16px; font-weight: 700; font-size: 0.9rem; color: var(--gray400);
+    transition: all 0.2s;
+  }
+  .partner-logo:hover { background: var(--teal-light); color: var(--teal); }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: var(--gray50); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .testimonial-card {
+    background: white; border: 1px solid var(--gray200); border-radius: var(--radius); padding: 28px;
+    transition: all 0.2s;
+  }
+  .testimonial-card:hover { box-shadow: var(--shadow-md); }
+  .stars { color: #F59E0B; font-size: 0.85rem; margin-bottom: 14px; }
+  .testimonial-card blockquote { font-size: 0.9rem; color: var(--gray600); font-style: italic; margin-bottom: 20px; line-height: 1.6; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .author-avatar {
+    width: 40px; height: 40px; border-radius: 50%; background: var(--teal);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; color: white; font-size: 0.85rem; flex-shrink: 0;
+  }
+  .author-name { font-weight: 600; font-size: 0.875rem; color: var(--navy); }
+  .author-title { font-size: 0.78rem; color: var(--gray400); }
+
+  /* ── CTA SECTION ── */
+  .cta-section { background: var(--navy); }
+  .cta-inner {
+    background: linear-gradient(135deg, rgba(14,165,233,0.15), rgba(6,182,212,0.08));
+    border: 1px solid rgba(14,165,233,0.2); border-radius: 20px;
+    padding: 64px; text-align: center;
+  }
+  .cta-inner h2 { color: white; margin-bottom: 16px; }
+  .cta-inner p { color: rgba(255,255,255,0.6); margin-bottom: 32px; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* ── CONTACT / QUOTE FORM ── */
+  .contact-section { background: var(--gray50); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; align-items: start; }
+  .contact-info h2 { margin-bottom: 16px; color: var(--navy); }
+  .contact-info p { margin-bottom: 32px; }
+  .contact-detail { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+  .contact-detail-icon {
+    width: 44px; height: 44px; background: var(--teal-light); border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;
+  }
+  .contact-detail h4 { font-size: 0.85rem; color: var(--navy); }
+  .contact-detail p { font-size: 0.85rem; color: var(--gray600); margin: 0; }
+  .form-card {
+    background: white; border: 1px solid var(--gray200); border-radius: 16px; padding: 36px;
+    box-shadow: var(--shadow-sm);
+  }
+  .form-card h3 { margin-bottom: 24px; color: var(--navy); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--gray800); margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 11px 14px; border: 1.5px solid var(--gray200); border-radius: var(--radius-sm);
+    font-family: var(--font); font-size: 0.9rem; color: var(--gray800);
+    transition: border-color 0.2s; background: white;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(14,165,233,0.1);
+  }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .btn-submit {
+    width: 100%; background: var(--teal); color: white; padding: 13px; border-radius: var(--radius-sm);
+    font-size: 0.95rem; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-submit:hover { background: var(--navy); }
+
+  /* ── ABOUT ── */
+  .about-hero { background: var(--navy); padding: 120px 0 80px; }
+  .about-hero h1 { color: white; }
+  .about-hero p { color: rgba(255,255,255,0.65); max-width: 600px; margin-top: 16px; font-size: 1.1rem; }
+  .about-content { background: white; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .value-list { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+  .value-item { display: flex; gap: 14px; align-items: flex-start; }
+  .value-icon { width: 36px; height: 36px; background: var(--teal-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .value-item h4 { color: var(--navy); font-size: 0.9rem; }
+  .value-item p { font-size: 0.82rem; color: var(--gray600); margin: 0; }
+  .timeline { border-left: 2px solid var(--gray200); padding-left: 24px; }
+  .timeline-item { position: relative; margin-bottom: 28px; }
+  .timeline-item::before {
+    content: ''; position: absolute; left: -31px; top: 6px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--teal); border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--teal);
+  }
+  .timeline-year { font-size: 0.75rem; font-weight: 700; color: var(--teal); letter-spacing: 0.08em; text-transform: uppercase; }
+  .timeline-item h4 { color: var(--navy); margin: 4px 0; }
+  .timeline-item p { font-size: 0.85rem; margin: 0; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 60px 0 32px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+  .footer-brand p { font-size: 0.875rem; line-height: 1.7; margin: 14px 0 20px; color: rgba(255,255,255,0.45); }
+  .footer-social { display: flex; gap: 10px; }
+  .social-btn {
+    width: 36px; height: 36px; background: rgba(255,255,255,0.07); border-radius: 8px;
+    display: flex; align-items: center; justify-content: center; font-size: 0.85rem;
+    transition: background 0.2s;
+  }
+  .social-btn:hover { background: var(--teal); }
+  footer h5 { color: white; font-size: 0.875rem; font-weight: 600; margin-bottom: 16px; }
+  .footer-links { display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+  .footer-links a:hover { color: white; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.35); margin: 0; }
+
+  /* ── PAGE SECTIONS (SPA) ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ── MOBILE NAV ── */
+  .mobile-menu {
+    display: none; position: fixed; top: 68px; left: 0; right: 0;
+    background: var(--navy2); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 20px 24px;
+    z-index: 99; flex-direction: column; gap: 16px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { color: rgba(255,255,255,0.8); font-size: 1rem; font-weight: 500; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-item:nth-child(2) { border-right: none; }
+    .features-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .partner-logos { grid-template-columns: repeat(3, 1fr); }
+    .testimonials-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    section { padding: 56px 0; }
+    .nav-links { display: none; }
+    .nav-mobile-btn { display: block; }
+    .products-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .stat-item:last-child { border-bottom: none; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .partner-logos { grid-template-columns: repeat(2, 1fr); }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-stats { flex-direction: column; gap: 16px; }
+    .cta-inner { padding: 36px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-logo" href="#" onclick="showPage('home')">
+      <div class="nav-logo-mark">M</div>
+      <div class="nav-logo-text">Medi<span>lyon</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('products')">Products</a>
+      <a href="#" onclick="showPage('partners')">Partners</a>
+      <a href="#" onclick="showPage('about')">About</a>
+      <a href="#" class="btn-nav" onclick="showPage('contact')">Request Quote</a>
+    </div>
+    <button class="nav-mobile-btn" onclick="toggleMobileMenu()">☰</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showPage('home');toggleMobileMenu()">Home</a>
+  <a href="#" onclick="showPage('products');toggleMobileMenu()">Products</a>
+  <a href="#" onclick="showPage('partners');toggleMobileMenu()">Partners</a>
+  <a href="#" onclick="showPage('about');toggleMobileMenu()">About</a>
+  <a href="#" onclick="showPage('contact');toggleMobileMenu()">Request Quote</a>
+</div>
+
+<!-- ══════════════════ HOME PAGE ══════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="hero-badge">🧬 IVD Distribution · Pan-India Coverage</div>
+        <h1>Empowering Diagnostics.<br><em>Where Accuracy Meets Innovation.</em></h1>
+        <p>Trusted distribution partner for high-quality in-vitro diagnostic solutions. We help laboratories and healthcare providers source certified products with reliable logistics and responsive support.</p>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary" onclick="showPage('products')">Explore Products →</a>
+          <a href="#" class="btn-secondary" onclick="showPage('contact')">Request a Quote</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">100<span>+</span></div>
+            <div class="hero-stat-label">Product SKUs</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">50<span>+</span></div>
+            <div class="hero-stat-label">Partner Labs</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">10<span>+</span></div>
+            <div class="hero-stat-label">States Served</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-icon blue">📦</div>
+          <div><h4>Reagents & Kits</h4><p>Chemistry · Immunoassay · Molecular</p></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon green">⚡</div>
+          <div><h4>Rapid Test Kits (POC)</h4><p>Point-of-care diagnostics</p></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon purple">🔬</div>
+          <div><h4>Lab Instruments</h4><p>Hematology · Analyzers · Centrifuges</p></div>
+        </div>
+        <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08)">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span style="background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);color:#10B981;font-size:0.75rem;font-weight:600;padding:4px 12px;border-radius:100px">✓ ISO-aligned</span>
+            <span style="background:rgba(14,165,233,0.15);border:1px solid rgba(14,165,233,0.3);color:var(--teal);font-size:0.75rem;font-weight:600;padding:4px 12px;border-radius:100px">✓ CE-certified</span>
+            <span style="background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);color:#8B5CF6;font-size:0.75rem;font-weight:600;padding:4px 12px;border-radius:100px">✓ Pan-India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item"><div class="trust-dot"></div> ISO/CE-aligned sourcing</div>
+        <div class="trust-item"><div class="trust-dot"></div> Pan-India distribution network</div>
+        <div class="trust-item"><div class="trust-dot"></div> 99% order accuracy target</div>
+        <div class="trust-item"><div class="trust-dot"></div> Dedicated account support</div>
+        <div class="trust-item"><div class="trust-dot"></div> Fast fulfillment guarantee</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Band -->
+  <div class="stats-band">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item"><div class="stat-num">100<span>+</span></div><div class="stat-label">Product SKUs (growing)</div></div>
+        <div class="stat-item"><div class="stat-num">50<span>+</span></div><div class="stat-label">Partner Labs & Clinics</div></div>
+        <div class="stat-item"><div class="stat-num">10<span>+</span></div><div class="stat-label">States Served</div></div>
+        <div class="stat-item"><div class="stat-num">99<span>%</span></div><div class="stat-label">Order Accuracy Target</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <div class="section-label">What You Get</div>
+      <h2 class="section-heading">Built for Modern Laboratories</h2>
+      <p class="section-sub">Everything a diagnostics provider needs — quality, speed, and support under one reliable partner.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📦</div>
+          <h3>Reliable Supply</h3>
+          <p>Consistent availability across chemistry, hematology, immunoassay, and molecular diagnostics categories. No stockouts, no surprises.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏅</div>
+          <h3>Quality Verification</h3>
+          <p>Documentation readiness and certified sourcing for smooth audits and compliance requirements. Every product fully traceable.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast Logistics</h3>
+          <p>Clear communication from PO to delivery, with real-time updates and on-time execution across all our delivery zones.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Dedicated Support</h3>
+          <p>Product onboarding, training coordination, and issue resolution — backed by a responsive team that picks up the phone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Categories -->
+  <section class="products-section">
+    <div class="container">
+      <div class="section-label">Our Portfolio</div>
+      <h2 class="section-heading">Diagnostic Solutions We Distribute</h2>
+      <p class="section-sub">A focused portfolio for modern laboratories and diagnostics centers — built for performance, compliance, and value.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+        <div onclick="showPage('products')" style="cursor:pointer;background:white;border:1px solid var(--gray200);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.2s" onmouseover="this.style.borderColor='var(--teal)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--gray200)';this.style.transform='none'">
+          <div style="font-size:2.2rem;margin-bottom:12px">🧪</div>
+          <h4 style="color:var(--navy)">Reagents & Kits</h4>
+          <p style="font-size:0.82rem;margin-top:6px">Chemistry, hematology, immunoassay</p>
+        </div>
+        <div onclick="showPage('products')" style="cursor:pointer;background:white;border:1px solid var(--gray200);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.2s" onmouseover="this.style.borderColor='var(--teal)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--gray200)';this.style.transform='none'">
+          <div style="font-size:2.2rem;margin-bottom:12px">⚡</div>
+          <h4 style="color:var(--navy)">Rapid Test Kits</h4>
+          <p style="font-size:0.82rem;margin-top:6px">Point-of-care diagnostics</p>
+        </div>
+        <div onclick="showPage('products')" style="cursor:pointer;background:white;border:1px solid var(--gray200);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.2s" onmouseover="this.style.borderColor='var(--teal)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--gray200)';this.style.transform='none'">
+          <div style="font-size:2.2rem;margin-bottom:12px">🔬</div>
+          <h4 style="color:var(--navy)">Molecular Diagnostics</h4>
+          <p style="font-size:0.82rem;margin-top:6px">PCR, NGS, molecular kits</p>
+        </div>
+        <div onclick="showPage('products')" style="cursor:pointer;background:white;border:1px solid var(--gray200);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.2s" onmouseover="this.style.borderColor='var(--teal)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--gray200)';this.style.transform='none'">
+          <div style="font-size:2.2rem;margin-bottom:12px">🩸</div>
+          <h4 style="color:var(--navy)">Hematology</h4>
+          <p style="font-size:0.82rem;margin-top:6px">CBC, blood cell analysis</p>
+        </div>
+        <div onclick="showPage('products')" style="cursor:pointer;background:white;border:1px solid var(--gray200);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.2s" onmouseover="this.style.borderColor='var(--teal)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--gray200)';this.style.transform='none'">
+          <div style="font-size:2.2rem;margin-bottom:12px">🔧</div>
+          <h4 style="color:var(--navy)">Lab Instruments</h4>
+          <p style="font-size:0.82rem;margin-top:6px">Analyzers, centrifuges, incubators</p>
+        </div>
+        <div onclick="showPage('products')" style="cursor:pointer;background:white;border:1px solid var(--gray200);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.2s" onmouseover="this.style.borderColor='var(--teal)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--gray200)';this.style.transform='none'">
+          <div style="font-size:2.2rem;margin-bottom:12px">🗂️</div>
+          <h4 style="color:var(--navy)">Consumables</h4>
+          <p style="font-size:0.82rem;margin-top:6px">Tubes, slides, pipettes, PPE</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:32px">
+        <a href="#" class="btn-primary" onclick="showPage('products')">View All Products →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Medilyon -->
+  <section class="why-section">
+    <div class="container">
+      <div class="why-grid">
+        <div>
+          <div class="section-label">Why Medilyon</div>
+          <h2 style="color:white;margin-bottom:16px">Your Results Matter.<br>We Make Sure of It.</h2>
+          <p style="color:rgba(255,255,255,0.55);margin-bottom:36px">We combine verified sourcing, responsive operations, and partner-first service so your lab can focus on what matters.</p>
+          <div class="why-points">
+            <div class="why-point">
+              <div class="why-num">01</div>
+              <div><h3>Quality Assurance</h3><p>Certified manufacturers and full documentation readiness for audits and compliance at every step.</p></div>
+            </div>
+            <div class="why-point">
+              <div class="why-num">02</div>
+              <div><h3>Fast Fulfillment</h3><p>Practical supply chain execution with clear timelines, real tracking, and reliable on-time delivery.</p></div>
+            </div>
+            <div class="why-point">
+              <div class="why-num">03</div>
+              <div><h3>Dedicated Support</h3><p>Sales and technical coordination to help you onboard, scale reliably, and resolve issues quickly.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="why-visual">
+          <div class="section-label">Performance Snapshot</div>
+          <h2 style="color:white;margin-bottom:8px">Consistent Results,<br>Every Order</h2>
+          <div class="why-stat-row">
+            <div class="why-stat"><div class="why-stat-v">99%</div><div class="why-stat-l">Order accuracy</div></div>
+            <div class="why-stat"><div class="why-stat-v">24h</div><div class="why-stat-l">Avg response time</div></div>
+            <div class="why-stat"><div class="why-stat-v">48h</div><div class="why-stat-l">Metro fulfillment</div></div>
+          </div>
+          <div class="cert-badges">
+            <div class="cert-badge"><span>✓ ISO-Aligned Sourcing</span></div>
+            <div class="cert-badge"><span>✓ CE Certified Products</span></div>
+            <div class="cert-badge"><span>✓ Audit-Ready Docs</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-label">Testimonials</div>
+      <h2 class="section-heading">What Our Partners Say</h2>
+      <p class="section-sub">Lab directors and procurement managers across India trust Medilyon for consistent supply and reliable support.</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Medilyon has been our primary IVD partner for over a year. Their documentation is always in order for audits and the turnaround time is consistently fast."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">DR</div>
+            <div><div class="author-name">Dr. Ramesh Kumar</div><div class="author-title">Lab Director, Apollo Diagnostics, Hyderabad</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"We switched to Medilyon six months ago and haven't looked back. The reagent quality is excellent and their team actually answers the phone."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">PS</div>
+            <div><div class="author-name">Priya Sharma</div><div class="author-title">Procurement Head, Metropolis Labs, Chennai</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"The rapid test kits from Medilyon have improved our POC workflow significantly. Delivery is always on time, even for our remote facility."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">AJ</div>
+            <div><div class="author-name">Dr. Anil Joshi</div><div class="author-title">Medical Officer, District Hospital, Pune</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="section-label" style="justify-content:center;display:flex">Get Started</div>
+        <h2>Need a Reliable IVD Supply Partner?</h2>
+        <p>Tell us what you're sourcing — category, monthly volume, city. We'll share availability, documentation, and pricing quickly.</p>
+        <div class="cta-btns">
+          <a href="#" class="btn-primary" onclick="showPage('contact')">Request a Quote →</a>
+          <a href="#" class="btn-secondary" onclick="showPage('contact')">Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════════ PRODUCTS PAGE ══════════════════ -->
+<div id="page-products" class="page">
+  <div style="background:var(--navy);padding:120px 0 60px">
+    <div class="container">
+      <div class="section-label">Our Portfolio</div>
+      <h1 style="color:white;margin-bottom:12px">Diagnostic Products</h1>
+      <p style="color:rgba(255,255,255,0.6);font-size:1.05rem;max-width:550px">Browse our complete catalog of IVD products — certified, quality-verified, and available for pan-India delivery.</p>
+    </div>
+  </div>
+  <section class="products-section" style="padding-top:48px">
+    <div class="container">
+      <div class="products-filters">
+        <button class="filter-btn active" onclick="filterProducts('all',this)">All Products</button>
+        <button class="filter-btn" onclick="filterProducts('reagents',this)">Reagents & Kits</button>
+        <button class="filter-btn" onclick="filterProducts('rapid',this)">Rapid Tests</button>
+        <button class="filter-btn" onclick="filterProducts('molecular',this)">Molecular</button>
+        <button class="filter-btn" onclick="filterProducts('hematology',this)">Hematology</button>
+        <button class="filter-btn" onclick="filterProducts('instruments',this)">Instruments</button>
+        <button class="filter-btn" onclick="filterProducts('consumables',this)">Consumables</button>
+      </div>
+      <div class="products-grid" id="productsGrid">
+
+        <div class="product-card" data-cat="reagents">
+          <div class="product-img">🧪</div>
+          <div class="product-body">
+            <div class="product-cat">Reagents & Kits</div>
+            <h4>Clinical Chemistry Reagents</h4>
+            <p>Complete panel reagents for LFT, KFT, lipid profile, and metabolic panels. Compatible with major analyzers.</p>
+            <div class="product-tags"><span class="tag">ISO 13485</span><span class="tag">CE Marked</span><span class="tag">24-month shelf</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="reagents">
+          <div class="product-img">🔴</div>
+          <div class="product-body">
+            <div class="product-cat">Reagents & Kits</div>
+            <h4>Immunoassay Reagent Set</h4>
+            <p>Hormone panels, tumor markers, infectious disease serology. High sensitivity and specificity.</p>
+            <div class="product-tags"><span class="tag">CE Marked</span><span class="tag">ELISA compatible</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="rapid">
+          <div class="product-img">⚡</div>
+          <div class="product-body">
+            <div class="product-cat">Rapid Tests</div>
+            <h4>COVID-19 Antigen Rapid Test</h4>
+            <p>15-minute result, 95%+ sensitivity. Suitable for clinics, pharmacies, and screening camps.</p>
+            <div class="product-tags"><span class="tag">ICMR Approved</span><span class="tag">CE Marked</span><span class="tag">Individual pack</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="rapid">
+          <div class="product-img">🩺</div>
+          <div class="product-body">
+            <div class="product-cat">Rapid Tests</div>
+            <h4>Malaria Antigen Combo Test</h4>
+            <p>P. falciparum / P. vivax combo. WHO-listed, used in national malaria elimination program.</p>
+            <div class="product-tags"><span class="tag">WHO Listed</span><span class="tag">ICMR Approved</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="rapid">
+          <div class="product-img">💊</div>
+          <div class="product-body">
+            <div class="product-cat">Rapid Tests</div>
+            <h4>HbA1c Rapid Test</h4>
+            <p>Point-of-care HbA1c for diabetes monitoring. Results in 5 minutes from whole blood.</p>
+            <div class="product-tags"><span class="tag">POC</span><span class="tag">5-min result</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="molecular">
+          <div class="product-img">🔬</div>
+          <div class="product-body">
+            <div class="product-cat">Molecular</div>
+            <h4>PCR Master Mix Kit</h4>
+            <p>High-fidelity Taq polymerase master mix for real-time PCR. 2x concentrated, 500 reactions.</p>
+            <div class="product-tags"><span class="tag">Real-time PCR</span><span class="tag">500 rxn</span><span class="tag">-20°C stable</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="molecular">
+          <div class="product-img">🧬</div>
+          <div class="product-body">
+            <div class="product-cat">Molecular</div>
+            <h4>Viral RNA Extraction Kit</h4>
+            <p>Column-based extraction for blood, serum, swab, and urine samples. Compatible with QIAamp protocol.</p>
+            <div class="product-tags"><span class="tag">50 preps</span><span class="tag">CE-IVD</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="hematology">
+          <div class="product-img">🩸</div>
+          <div class="product-body">
+            <div class="product-cat">Hematology</div>
+            <h4>CBC 5-Part Diff Reagent Pack</h4>
+            <p>Complete reagent set for 5-part differential CBC analyzers. Lyse, diluent, and rinse included.</p>
+            <div class="product-tags"><span class="tag">5-part diff</span><span class="tag">2000 tests</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="hematology">
+          <div class="product-img">💉</div>
+          <div class="product-body">
+            <div class="product-cat">Hematology</div>
+            <h4>ESR Analyzer Reagents</h4>
+            <p>Westergren method ESR reagent set. Automated analyzer compatible. Stable at room temperature.</p>
+            <div class="product-tags"><span class="tag">Westergren</span><span class="tag">Automated</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="instruments">
+          <div class="product-img">🔧</div>
+          <div class="product-body">
+            <div class="product-cat">Instruments</div>
+            <h4>Benchtop Centrifuge 5000 RPM</h4>
+            <p>12-position rotor, programmable speed & time. Ideal for serum/plasma separation in clinical labs.</p>
+            <div class="product-tags"><span class="tag">5000 RPM</span><span class="tag">12-position</span><span class="tag">CE</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="instruments">
+          <div class="product-img">📊</div>
+          <div class="product-body">
+            <div class="product-cat">Instruments</div>
+            <h4>Semi-Auto Biochemistry Analyzer</h4>
+            <p>Photometric analyzer for clinical chemistry. 200 tests/hour, touchscreen interface, LIS connectivity.</p>
+            <div class="product-tags"><span class="tag">200 t/hr</span><span class="tag">LIS ready</span><span class="tag">CE</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="consumables">
+          <div class="product-img">🗂️</div>
+          <div class="product-body">
+            <div class="product-cat">Consumables</div>
+            <h4>EDTA Vacutainer Tubes (Pack of 100)</h4>
+            <p>3mL and 5mL EDTA tubes for CBC collection. BD-compatible closure, latex-free.</p>
+            <div class="product-tags"><span class="tag">Latex-free</span><span class="tag">100/pack</span><span class="tag">3mL/5mL</span></div>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:48px;padding:32px;background:var(--teal-light);border-radius:var(--radius)">
+        <h3 style="color:var(--navy);margin-bottom:8px">Don't see what you're looking for?</h3>
+        <p style="margin-bottom:20px;max-width:500px;margin-left:auto;margin-right:auto">We source 100+ SKUs across all IVD categories. Tell us what you need — we'll check availability and pricing within 24 hours.</p>
+        <a href="#" class="btn-primary" onclick="showPage('contact')">Request a Specific Product →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════ PARTNERS PAGE ══════════════════ -->
+<div id="page-partners" class="page">
+  <div style="background:var(--navy);padding:120px 0 60px">
+    <div class="container">
+      <div class="section-label">Our Network</div>
+      <h1 style="color:white;margin-bottom:12px">Trusted Partners</h1>
+      <p style="color:rgba(255,255,255,0.6);font-size:1.05rem;max-width:550px">We partner with leading IVD manufacturers and serve diagnostic labs, hospitals, and clinics across India.</p>
+    </div>
+  </div>
+  <section class="partners-section">
+    <div class="container">
+      <div class="section-label">Manufacturer Partners</div>
+      <h2 class="section-heading">World-Class Brands We Distribute</h2>
+      <p class="section-sub">Medilyon is an authorized distribution partner for certified IVD manufacturers. All products come with full documentation and manufacturer warranties.</p>
+      <div class="partner-logos">
+        <div class="partner-logo">Roche Diagnostics</div>
+        <div class="partner-logo">Abbott Alinity</div>
+        <div class="partner-logo">Siemens Healthineers</div>
+        <div class="partner-logo">Beckman Coulter</div>
+        <div class="partner-logo">bioMérieux</div>
+        <div class="partner-logo">Sysmex</div>
+        <div class="partner-logo">Mindray</div>
+        <div class="partner-logo">Transasia Bio</div>
+        <div class="partner-logo">Erba Mannheim</div>
+        <div class="partner-logo">SD Biosensor</div>
+        <div class="partner-logo">Meril Diagnostics</div>
+        <div class="partner-logo">J. Mitra & Co.</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--gray50)">
+    <div class="container">
+      <div class="section-label">Who We Serve</div>
+      <h2 class="section-heading">Our Customer Network</h2>
+      <p class="section-sub">We supply diagnostic solutions to labs and healthcare providers across a range of settings.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div style="background:white;border:1px solid var(--gray200);border-radius:var(--radius);padding:28px;text-align:center">
+          <div style="font-size:2.5rem;margin-bottom:14px">🏥</div>
+          <h3 style="color:var(--navy);margin-bottom:8px">Hospital Labs</h3>
+          <p style="font-size:0.875rem">NABL-accredited hospital laboratories requiring high-volume reagent supply and instrument support.</p>
+        </div>
+        <div style="background:white;border:1px solid var(--gray200);border-radius:var(--radius);padding:28px;text-align:center">
+          <div style="font-size:2.5rem;margin-bottom:14px">🔬</div>
+          <h3 style="color:var(--navy);margin-bottom:8px">Diagnostic Centers</h3>
+          <p style="font-size:0.875rem">Standalone diagnostics labs and chain pathology centers needing reliable supply and competitive pricing.</p>
+        </div>
+        <div style="background:white;border:1px solid var(--gray200);border-radius:var(--radius);padding:28px;text-align:center">
+          <div style="font-size:2.5rem;margin-bottom:14px">🏡</div>
+          <h3 style="color:var(--navy);margin-bottom:8px">Clinics & Nursing Homes</h3>
+          <p style="font-size:0.875rem">Small-format providers using rapid test kits and point-of-care devices for in-clinic diagnostics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner">
+        <h2>Become a Supply Partner</h2>
+        <p>Are you an IVD manufacturer or regional distributor? We're always open to building new partnerships.</p>
+        <div class="cta-btns">
+          <a href="#" class="btn-primary" onclick="showPage('contact')">Get in Touch →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════ ABOUT PAGE ══════════════════ -->
+<div id="page-about" class="page">
+  <div class="about-hero">
+    <div class="container">
+      <div class="section-label">Our Story</div>
+      <h1>Empowering Diagnostics<br>Across India</h1>
+      <p>Medilyon Healthcare Pvt Ltd was built on a simple belief: every laboratory deserves access to quality IVD products, delivered on time, with the support to use them well.</p>
+    </div>
+  </div>
+  <section class="about-content">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <div class="section-label">Mission & Vision</div>
+          <h2 style="color:var(--navy);margin-bottom:16px">Making Diagnostics Better,<br>Together</h2>
+          <p style="margin-bottom:20px">Our mission is to be the most reliable IVD distribution partner in India — connecting certified manufacturers with the labs and healthcare providers that need their products.</p>
+          <p>We believe that fast, accurate diagnostics save lives, and that every lab — whether a 500-bed hospital or a rural clinic — deserves the same quality of supply and support.</p>
+          <div class="value-list">
+            <div class="value-item">
+              <div class="value-icon">🎯</div>
+              <div><h4>Quality First</h4><p>We only source from certified manufacturers with full documentation readiness.</p></div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🤝</div>
+              <div><h4>Partner-Centric</h4><p>Your success is our success. We invest in relationships, not transactions.</p></div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🚀</div>
+              <div><h4>Execution Excellence</h4><p>We do what we say, on time, with no surprises.</p></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">Our Journey</div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">2020</div>
+              <h4>Founded in Hyderabad</h4>
+              <p>Medilyon Healthcare incorporated with a focus on IVD distribution in Telangana and Andhra Pradesh.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2021</div>
+              <h4>First 25 Labs Onboarded</h4>
+              <p>Rapid expansion to 25 partner labs. Added molecular diagnostics to our product catalog during COVID-19 surge.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2022</div>
+              <h4>Pan-India Distribution</h4>
+              <p>Expanded coverage to 10+ states. Signed distribution agreements with 3 new international IVD manufacturers.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2023</div>
+              <h4>50+ Partner Milestone</h4>
+              <p>Surpassed 50 active partner labs and clinics. Launched dedicated account management program.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2024–25</div>
+              <h4>100+ SKUs & Growing</h4>
+              <p>Expanded catalog to 100+ SKUs across all major IVD categories. Continuing to grow our network across India.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="stats-band">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item"><div class="stat-num">100<span>+</span></div><div class="stat-label">Product SKUs</div></div>
+        <div class="stat-item"><div class="stat-num">50<span>+</span></div><div class="stat-label">Partner Labs</div></div>
+        <div class="stat-item"><div class="stat-num">10<span>+</span></div><div class="stat-label">States Served</div></div>
+        <div class="stat-item"><div class="stat-num">5<span>+</span></div><div class="stat-label">Years of Service</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ CONTACT PAGE ══════════════════ -->
+<div id="page-contact" class="page">
+  <div style="background:var(--navy);padding:120px 0 60px">
+    <div class="container">
+      <div class="section-label">Get in Touch</div>
+      <h1 style="color:white;margin-bottom:12px">Request a Quote</h1>
+      <p style="color:rgba(255,255,255,0.6);font-size:1.05rem;max-width:550px">Tell us what you're sourcing. We'll get back to you with availability, documentation, and pricing within 24 hours.</p>
+    </div>
+  </div>
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label">Contact Details</div>
+          <h2>We're Ready to Help</h2>
+          <p>Reach out via email, phone, or fill in the quote form. Our team responds within one business day.</p>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉️</div>
+            <div><h4>Email</h4><p>info@medilyonhealthcare.com</p></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div><h4>Phone / WhatsApp</h4><p>+91-XXXXXXXXXX</p></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div><h4>Registered Office</h4><p>Hyderabad, Telangana, India</p></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕐</div>
+            <div><h4>Business Hours</h4><p>Mon–Sat, 9:00 AM – 6:00 PM IST</p></div>
+          </div>
+          <div style="margin-top:32px;padding:20px;background:var(--teal-light);border-radius:var(--radius);border-left:4px solid var(--teal)">
+            <h4 style="color:var(--navy);margin-bottom:6px">Fast Response Guarantee</h4>
+            <p style="font-size:0.875rem;margin:0">All quote requests receive a response within 24 business hours with pricing and availability.</p>
+          </div>
+        </div>
+        <div class="form-card">
+          <h3>Request a Quote</h3>
+          <form onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" placeholder="Dr. Ramesh" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" placeholder="Kumar" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Organization / Lab Name *</label>
+              <input type="text" placeholder="Apollo Diagnostics, Hyderabad" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" placeholder="you@lab.com" required>
+              </div>
+              <div class="form-group">
+                <label>Phone / WhatsApp *</label>
+                <input type="tel" placeholder="+91 98765 43210" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>City</label>
+                <input type="text" placeholder="Hyderabad">
+              </div>
+              <div class="form-group">
+                <label>Product Category</label>
+                <select>
+                  <option value="">Select category…</option>
+                  <option>Reagents & Kits</option>
+                  <option>Rapid Test Kits</option>
+                  <option>Molecular Diagnostics</option>
+                  <option>Hematology</option>
+                  <option>Lab Instruments</option>
+                  <option>Consumables</option>
+                  <option>Multiple / Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Tell us what you need</label>
+              <textarea placeholder="Specific products, monthly volume, any compliance requirements, existing analyzer models…"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit Quote Request →</button>
+          </form>
+          <div id="formSuccess" style="display:none;text-align:center;padding:32px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:var(--radius);margin-top:20px">
+            <div style="font-size:2.5rem;margin-bottom:12px">✅</div>
+            <h3 style="color:var(--navy);margin-bottom:8px">Request Received!</h3>
+            <p style="margin:0;font-size:0.9rem">We'll get back to you within 24 business hours with pricing and availability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:14px">
+          <div class="nav-logo-mark">M</div>
+          <div class="nav-logo-text">Medi<span>lyon</span></div>
+        </div>
+        <p>Where Accuracy Meets Innovation. Reliable supply, certified products, and responsive support for labs and healthcare providers across India.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="mailto:info@medilyonhealthcare.com">✉</a>
+          <a class="social-btn" href="#">in</a>
+          <a class="social-btn" href="#">𝕏</a>
+        </div>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <div class="footer-links">
+          <a href="#" onclick="showPage('home')">Home</a>
+          <a href="#" onclick="showPage('about')">About Us</a>
+          <a href="#" onclick="showPage('partners')">Partners</a>
+          <a href="#" onclick="showPage('contact')">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h5>Products</h5>
+        <div class="footer-links">
+          <a href="#" onclick="showPage('products')">Reagents & Kits</a>
+          <a href="#" onclick="showPage('products')">Rapid Tests</a>
+          <a href="#" onclick="showPage('products')">Molecular</a>
+          <a href="#" onclick="showPage('products')">Instruments</a>
+        </div>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Medilyon Healthcare Pvt Ltd. All rights reserved.</p>
+      <p>Where Accuracy Meets Innovation.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function toggleMobileMenu() {
+    const m = document.getElementById('mobileMenu');
+    m.classList.toggle('open');
+  }
+
+  function filterProducts(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.product-card').forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function submitForm(e) {
+    e.preventDefault();
+    e.target.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+
+  // Close mobile menu on outside click
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.querySelector('.nav-mobile-btn');
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>
