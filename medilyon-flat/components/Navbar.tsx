@@ -2,6 +2,13 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+const NAV_LINKS = [
+  { href: '/', label: 'Home' },
+  { href: '/products', label: 'Products' },
+  { href: '/partners', label: 'Partners' },
+  { href: '/about', label: 'About' },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
@@ -12,7 +19,7 @@ export default function Navbar() {
           <span className="font-bold text-white text-lg">Medi<span className="text-teal">lyon</span></span>
         </Link>
         <div className="hidden md:flex items-center gap-8">
-          {['/', '/products', '/partners', '/about'].map(([href, label]) => (
+          {NAV_LINKS.map(({ href, label }) => (
             <Link key={href} href={href} className="text-white/75 hover:text-white text-sm font-medium transition-colors">{label}</Link>
           ))}
           <Link href="/contact" className="bg-teal hover:bg-teal-2 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-colors">Request Quote</Link>
@@ -21,7 +28,7 @@ export default function Navbar() {
       </div>
       {open && (
         <div className="md:hidden bg-navy border-t border-white/10 px-6 py-4 flex flex-col gap-4">
-          {[['/', 'Home'], ['/products', 'Products'], ['/partners', 'Partners'], ['/about', 'About'], ['/contact', 'Request Quote']].map(([href, label]) => (
+          {[...NAV_LINKS, { href: '/contact', label: 'Request Quote' }].map(({ href, label }) => (
             <Link key={href} href={href} onClick={() => setOpen(false)} className="text-white/80 font-medium py-2 border-b border-white/5">{label}</Link>
           ))}
         </div>
